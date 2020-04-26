@@ -1,0 +1,522 @@
+@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+  
+body {
+    background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px),
+      linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+    font-family: Oswald, sans-serif;
+}
+  
+.sign {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-image: radial-gradient(
+      ellipse 50% 35% at 50% 50%,
+      #6b1839,
+      transparent
+    );
+    transform: translate(-50%, -50%);
+    letter-spacing: 2;
+    left: 50%;
+    top: 50%;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 6em;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+}
+  
+@keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
+    }
+}
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+}
+  
+@keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+}
+  
+@keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.p1 main {
+  min-height: 90vh;
+}
+
+.p1 {
+  background-size: cover;
+  color: white;
+}
+
+.p1 header {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.nav-link {
+  margin-left: 10%;
+}
+
+.logo {
+  float: right;
+}
+
+.p1 .logo {
+  flex: 1;
+  font-size: 2rem;
+  padding-left: 10%;
+  align-items: center;
+  cursor: pointer;
+}
+
+.p1 ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+  padding-top: 20px;
+  padding-right: 50px;
+}
+.p1 a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.p1 li {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.p1 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p1 main p {
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 69px !important;
+  padding-top: 150px;
+  font-family: Clip;
+}
+
+.p1 .scroll {
+  position: absolute;
+  bottom: 2%;
+  font-size: 40px;
+}
+
+.p2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px),
+      linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+    display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+  flex: 1;
+  
+}
+
+.p2 .text {
+  width: 50%;
+  color: white;
+  box-sizing: border-box;
+}
+
+.p2 .text h1 {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.p2 .text p {
+  font-size: 200%;
+}
+
+.image {
+  border-radius: 25px;
+  width: 30%;
+  height: 30%;
+  margin: 5%;
+}
+
+.p3 {
+    background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px),
+      linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+}
+
+.p3 header {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.p3 header h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.p3 main {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.p3 ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+  flex: 1;
+}
+
+.p3 li {
+  background-color: #ff2483;
+  margin: 5%;
+  color: white;
+  width: 314px;
+  height: 404px;
+  text-align: center;
+  display: inline;
+  padding-right: 20px;
+}
+
+.p3 li .full {
+  background-color: #3f3d56;
+  margin-bottom: 20px;
+  color: white;
+  border: none;
+  width: 164px;
+  height: 40px;
+}
+
+.p3 li h4 {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.p3 li button {
+  width: 164px;
+  height: 40px;
+  font-size: 18px;
+  font-family: Oswald;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.p3 li img {
+  width: 233px;
+  height: 164px;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+
+footer {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px),
+      linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+  color: white;
+  opacity: 0.7;
+}
+
+.box {
+	display: inline-block;
+	border-width: 20 px;
+}
+
+@media screen and (max-width: 500px) {
+  
+  .p1 .logo {
+    padding-left: 10%;
+  }
+
+  .p1 ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .p1 li {
+    flex-direction: column;
+    padding-bottom: 5px;
+    font-size: 20px;
+  }
+
+  .p1 main h1 {
+    font-size: 45px;
+  }
+  .p1 main p {
+    font-size: 24px;
+  }
+
+  .p2 {
+    flex-direction: column;
+  }
+
+  .p2 .text {
+    width: 20vh;
+    height: auto;
+  }
+
+  .p2 .text h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .p2 .text p {
+    font-size: 18px;
+  }
+
+  .p2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .p3 li {
+    margin-top: 10%;
+  }
+
+  .p3 ul {
+    padding-bottom: 10%;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .p2 img {
+    width: 50%;
+    height: auto;
+  }
+  .p2 .text {
+    width: 20vh;
+    height: auto;
+  }
+
+  .p2 .text h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .p2 .text p {
+    font-size: 18px;
+  }
+}
