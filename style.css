@@ -265,6 +265,9 @@ html {
   transition: 0.4s ease;
   cursor: pointer;
 }
+.pi a:hover{
+  color:#ff2483;
+}
 
 .p1 li {
   display: flex;
